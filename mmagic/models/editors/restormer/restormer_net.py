@@ -468,11 +468,11 @@ class Restormer(BaseModule):
                 LayerNorm_type=LayerNorm_type) for i in range(num_blocks[1])
         ])
 
-        self.up2_1 = Upsample(int(dim * 2**1))
+        self.up2_1 = Upsample(int(dim * 2 ** 1))
 
         self.decoder_level1 = nn.Sequential(*[
             TransformerBlock(
-                dim=int(dim * 2**1),
+                dim=int(dim * 2 ** 1),
                 num_heads=heads[0],
                 ffn_expansion_factor=ffn_expansion_factor,
                 bias=bias,
@@ -481,7 +481,7 @@ class Restormer(BaseModule):
 
         self.refinement = nn.Sequential(*[
             TransformerBlock(
-                dim=int(dim * 2**1),
+                dim=int(dim * 2 ** 1),
                 num_heads=heads[0],
                 ffn_expansion_factor=ffn_expansion_factor,
                 bias=bias,
@@ -493,10 +493,10 @@ class Restormer(BaseModule):
         self.dual_keys = dual_keys
         if self.dual_pixel_task:
             self.skip_conv = nn.Conv2d(
-                dim, int(dim * 2**1), kernel_size=1, bias=bias)
+                dim, int(dim * 2 ** 1), kernel_size=1, bias=bias)
 
         self.output = nn.Conv2d(
-            int(dim * 2**1),
+            int(dim * 2 ** 1),
             out_channels,
             kernel_size=3,
             stride=1,
