@@ -49,7 +49,7 @@ from .plain import PlainDecoder, PlainRefiner
 from .rdn import RDNNet
 from .real_basicvsr import RealBasicVSR, RealBasicVSRNet
 from .real_esrgan import RealESRGAN, UNetDiscriminatorWithSpectralNorm
-from .restormer import Restormer
+from .restormer import Restormer, Restormer_N2N
 from .sagan import SAGAN
 from .singan import SinGAN
 from .srcnn import SRCNNNet
@@ -90,7 +90,7 @@ __all__ = [
     'DiscoDiffusion', 'IDLossModel', 'PESinGAN', 'MSPIEStyleGAN2',
     'StyleGAN3Generator', 'InstColorization', 'NAFBaseline',
     'NAFBaselineLocal', 'NAFNet', 'NAFNetLocal', 'DenoisingUnet',
-    'ClipWrapper', 'EG3D', 'Restormer', 'SwinIRNet', 'StableDiffusion',
+    'ClipWrapper', 'EG3D', 'Restormer', 'Restormer_N2N', 'SwinIRNet', 'StableDiffusion',
     'ControlStableDiffusion', 'DreamBooth', 'TextualInversion', 'DeblurGanV2',
     'DeblurGanV2Generator', 'DeblurGanV2Discriminator',
     'StableDiffusionInpaint'
